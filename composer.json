@@ -1,17 +1,34 @@
 {
 	"name": "plato-creative/silverstripe-fieldcounter",
 	"description": "Adds a counter to defined fields to show remaining characters",
-	"type": "silverstripe-module",
-	"keywords": ["silverstripe", "fields", "counter", "limit", "plato", "creative"],
-	"authors": [{
-		"name": "Myles Derham",
-		"email": "myles@platocreative.co.nz"
-	}],
-	"require":
-	{
+	"type": "silverstripe-vendormodule",
+	"keywords": [
+		"silverstripe",
+		"fields",
+		"counter",
+		"limit",
+		"plato",
+		"creative"
+	],
+	"authors": [
+		{
+			"name": "Myles Derham",
+			"email": "myles@platocreative.co.nz"
+		}
+	],
+	"require": {
+		"silverstripe/vendor-plugin": "^1",
 		"silverstripe/framework": "~4.0"
 	},
 	"extra": {
-		"installer-name": "fieldcounter"
+		"expose": [
+			"css",
+			"javascript"
+		]
+	},
+	"autoload": {
+		"psr-4": {
+			"PlatoCreative\\FieldCounter\\FieldCounterCMSExtension\\": "src/"
+		}
 	}
 }
